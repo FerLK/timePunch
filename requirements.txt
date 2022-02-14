@@ -9,9 +9,8 @@ gunicorn==20.1.0
 itsdangerous==2.0.1
 Jinja2==3.0.3
 MarkupSafe==2.0.1
-pkg_resources==0.0.0
 PyJWT==1.4.2
 pytz==2021.3
 six==1.16.0
 SQLAlchemy==1.4.31
-Werkzeug==2.0.3
+
