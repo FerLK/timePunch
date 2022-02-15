@@ -1,0 +1,39 @@
+{%extends "model-page.html"%}
+{%block content%}
+
+<div class = "mid">
+    <div class = "container_mid">
+        <h2>Login for Access</h2>
+        <form action="" method="POST">
+          <ul class = "">
+              {% if current_user.is_authenticated %}
+
+              <div class="form-item">
+                  <span class="material-icons">label</span>
+                  <h2><a href="{{url_for('logout')}}">logout</a></h2>
+
+              </div>
+              {%else%}
+
+            <div class="form-item">
+                  <span class="material-icons">label</span>
+                  {{form.hidden_tag()}}
+                  {{form.email.label}}{{form.email()}}
+
+                </div>
+              <div class="form-item">
+                  <span class="material-icons">label</span>
+                  {{form.hidden_tag()}}
+                  {{form.password.label}}{{form.password()}}
+                </div>
+            <br>
+            <button type="submit" {{form.submit}} Enter</button>
+            <br>
+            <p>New User ?</p> <a href="users/add">Create an Account</a>
+              {% endif %}
+          </ul>
+        </form>
+    </div>
+</div>
+
+{%endblock%}
