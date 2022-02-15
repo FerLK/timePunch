@@ -2,11 +2,11 @@
 <img class="logo" src="/static/images/clock.png" alt="" >
 <nav>
     <ul class = "nav_links">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Initiate</a></li>
-        <li><a href="#">Profile</a></li>
-        <li><a href="#">Works</a></li>
-        <li><a class ="cta" href="#"><button>sign</button></a></li>
+        <li><a href="{{url_for('index')}}">Home</a></li>
+        <li><a href="{{url_for('add_works')}}">Initiate</a></li>
+        <li><a href="{{url_for('profile_users')}}">Profile</a></li>
+        <li><a href="{{url_for('list_users')}}">List</a></li>
+        <li><a class ="cta" href="{{url_for('login')}}"><button>sign</button></a></li>
     </ul>
 </nav>
 <div id = "clock">

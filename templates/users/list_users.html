@@ -1,0 +1,33 @@
+{%extends "model-page.html"%}
+{%block content%}
+<div class = "mid">
+    <div class = "container_mid" id="reg">
+        <h2>List</h2>
+
+          <form action="" method="GET">
+            {%for user in all_users%}
+            <div class = "row_mid">
+                <ul>
+                <h3>      {{user}}   </h3>
+
+                </ul>
+             <br>
+            </div>
+            {%endfor%}
+          </form>
+        <form action="" method="GET">
+            {%for work in all_works%}
+            <div class = "row_mid">
+                <ul>
+                <h3>      {{work}}   </h3>
+                <h3>      {{work.id}}   </h3>
+                </ul>
+             <br>
+            </div>
+            {%endfor%}
+          </form>
+
+    </div>
+</div>
+
+{%endblock%}

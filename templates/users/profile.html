@@ -1,0 +1,38 @@
+{%extends "model-page.html"%}
+{%block content%}
+
+<div class = "mid">
+    <div class = "container_mid">
+        <h2>PROFILE</h2>
+        <form action="" method="POST">
+          <ul class = "">
+            <div class="form-item">
+                  <span class="material-icons">label</span>
+                   <h3>Name : {{name}}</h3>
+                </div>
+              <div class="form-item">
+                  <span class="material-icons">label</span>
+                   <h3>ID : {{id_}}</h3>
+                </div>
+               <div class="form-item">
+                  <span class="material-icons">label</span>
+                   <h3>Worked Days : {{alltime_work}}</h3>
+                </div>
+
+            <br>
+            </ul>
+            <h4>Last Work</h4><br>
+
+             {%for work in all_works%}
+                <div class="">
+                <ul>
+                    <p>{{work}}</p><br>
+                </ul>
+                </div>
+            {%endfor%}
+
+        </form>
+    </div>
+</div>
+
+{%endblock%}

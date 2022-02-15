@@ -17,19 +17,19 @@
 
             <div class="form-item">
                   <span class="material-icons">label</span>
-                  {{form.hidden_tag()}}
-                  {{form.email.label}}{{form.email()}}
+                  <label>email:</label>
+                  <input type="text" name="email">
 
                 </div>
               <div class="form-item">
                   <span class="material-icons">label</span>
-                  {{form.hidden_tag()}}
-                  {{form.password.label}}{{form.password()}}
+                  <label>password:</label>
+                  <input type="text" name="password">
                 </div>
             <br>
-            <button type="submit" {{form.submit}} Enter</button>
+            <button type="submit"> Enter</button><br>
             <br>
-            <p>New User ?</p> <a href="users/add">Create an Account</a>
+            <p>New User ?</p> <a href="/add">Create an Account</a>
               {% endif %}
           </ul>
         </form>

@@ -1,0 +1,60 @@
+{%extends "model-page.html"%}
+{%block content%}
+<div class = "mid">
+    <div class = "container_mid" id="reg">
+        <h2>Works</h2>
+        {% if not active%}
+            <form action="" method="POST">
+               <p>Usuário: {{name}}</p>
+               <div class="form-item">
+               <span class="material-icons">label</span>
+
+                  <p>Function: </p>
+                   <input type="text" name="name">
+                </div>
+               <br>
+
+                <div class = "camps">
+                    <p  value = "">Local</p><br>
+
+                    <span class="local"><input type = "radio"  name = "local" value = "Presential"> Presential</span>
+
+                    <span class="local"><input type = "radio"  name = "local" value = "Home office"> Home Office</span>
+
+                    <span class="local"><input type = "radio"  name = "local" value = "Outside"> On The Street</span>
+                </div><br>
+
+                 <div class = "camps">
+                    <p id="label" value = "">Work Period</p><br>
+
+                    <span class="local"><input type = "radio"  name = "" value = "6"> Trainee - 6h</span>
+
+                    <span class="local"><input type = "radio"  name = "" value = "8"> Regular - 8h</span>
+
+                    <span class="local"><input type = "radio"  name = "" value = "12"> Extra Time - 12h</span>
+                </div><br><br>
+
+
+
+
+             <button type="submit"> SEND </button>
+           </form>
+
+             {%else%}
+            <h1>{{time}}</h1>
+            <form action="" method="POST">
+            <div class="form-item">
+             <span class="material-icons">label</span>
+
+               <br>
+            </div><br>
+              <h3>End the Day ? </h3><br>
+
+             <button type="submit"> SEND </button> <br>
+            {% endif %}
+            </form>
+
+    </div>
+</div>
+
+{%endblock%}
