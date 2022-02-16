@@ -119,7 +119,7 @@ def del_users():
 @app.route('/list')
 def list_users():
     users = User.query.all()
-    works = [1, 2, 3, 4]
+    works = Work.query.filter_by(user_id=current_user.id)
     return render_template("users/list_users.html", all_users=users, all_works=works)
 
 
@@ -128,7 +128,7 @@ def list_users():
 def profile_users():
     works = Work.query.filter_by(user_id=current_user.id)
     alltime_work = Work.query.filter_by(user_id=current_user.id).count()
-    return render_template("profile.html", alltime_work=alltime_work, name=current_user.name,
+    return render_template("users/profile.html", alltime_work=alltime_work, name=current_user.name,
                            id_=current_user.id, working=current_user.working, all_works=works)
 
 ###WORKS###
@@ -168,8 +168,8 @@ def add_works():
         db.session.add(user_work)
         db.session.commit()
 
-        return redirect(url_for("works.add"))
-    return render_template("add_work.html", time=time, works=works, active=current_user.working, name=current_user.name)
+        return redirect(url_for("add_works"))
+    return render_template("works/add_work.html", time=time, works=works, active=current_user.working, name=current_user.name)
 
 
 @app.route('/profile_work', methods=['GET', 'POST'])
@@ -179,8 +179,8 @@ def profile_works():
     time = datetime.now()
 
     if False:
-        return redirect(url_for("works.add"))
-    return render_template("profile_work.html")
+        return redirect(url_for("add_works"))
+    return render_template("works/profile_work.html")
 
 
 if __name__ == '__main__':
