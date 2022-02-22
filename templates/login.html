@@ -1,39 +1,48 @@
 {%extends "model-page.html"%}
 {%block content%}
 
-<div class = "mid">
-    <div class = "container_mid">
-        <h2>Login for Access</h2>
-        <form action="" method="POST">
+
+<!-- Hero Section  -->
+  <section id="hero" class="hero container">
+    <div class="hero-info">
+      <h1 class="hero-info-heading">Login </h1>
+      <br>
+
+
+      <form action="" method="POST">
           <ul class = "">
               {% if current_user.is_authenticated %}
 
-              <div class="form-item">
-                  <span class="material-icons">label</span>
+              <div class="hero-info">
                   <h2><a href="{{url_for('logout')}}">logout</a></h2>
 
               </div>
               {%else%}
 
-            <div class="form-item">
-                  <span class="material-icons">label</span>
-                  <label>email:</label>
-                  <input type="text" name="email">
+            <div class="hero-info">
+                  <input class="hero-input" type="email" name="email" placeholder="user@email.com">
 
+                </div><br><br>
+              <div class="hero-info">
+                  <input class="hero-input" type="password" name="password" placeholder="password">
                 </div>
-              <div class="form-item">
-                  <span class="material-icons">label</span>
-                  <label>password:</label>
-                  <input type="text" name="password">
-                </div>
+
+            <button type="submit" class="hero-info-button"> Enter</button><br>
             <br>
-            <button type="submit"> Enter</button><br>
-            <br>
-            <p>New User ?</p> <a href="/add">Create an Account</a>
+            <p class="hero-info-link"><font size="1"><a  href="/add">Create an Account</a></font></p>
               {% endif %}
           </ul>
         </form>
+        </div>
+
+
+    <div class="hero-img">
+      <img src="static/images/12.jpg" alt="">
     </div>
-</div>
+  </section>
+  <!-- End Hero Section  -->
+
 
 {%endblock%}
+
+

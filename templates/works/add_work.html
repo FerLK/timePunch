@@ -4,10 +4,10 @@
   <!-- Hero Section  -->
   <section id="hero" class="hero container">
     <div class="hero-info">
-      <h1 class="hero-info-heading">Punch the Clock</h1>
-      <p class="hero-info-subheading">Work Info</p>
 
     {% if not active%}
+      <h1 class="hero-info-heading">Punch the Clock</h1>
+      <p class="hero-info-subheading">Work Info</p>
       <form action="" method="POST">
         <p class="hero-info-subheading">Usuário: {{name}}</p>
            <div>
@@ -38,16 +38,17 @@
            </form>
 
              {%else%}
-            <h1>{{time}}</h1>
+         <h1 class="hero-info-heading">End the Day ?</h1>
+      <p class="hero-info-subheading">Worked for >>> <a class=hero-info-label>{{time}}<a></a>
+        <h1>-----</h1>
+            <br>
             <form action="" method="POST">
             <div class="form-item">
              <span class="material-icons">label</span>
 
                <br>
             </div><br>
-              <h3>End the Day ? </h3><br>
-            <a href="#" type="button" class="hero-info-button">Portfolio</a>
-             <button type="submit"> SEND </button> <br>
+             <button class="hero-info-button" type="submit"> END </button> <br>
             {% endif %}
             </form>
 

@@ -1,37 +1,47 @@
 {%extends "model-page.html"%}
 {%block content%}
-<div class = "mid">
-    <div class = "container_mid" id="reg">
-        <h2>Register</h2>
-          <form method="POST">
-              <div class="form-item">
-                  <span class="material-icons">label</span>
-                  <label >Name:</label>
-                  <input type="text" id="name" name="name"
-           minlength="4" required>
+
+
+<!-- Hero Section  -->
+  <section id="hero" class="hero container">
+    <div class="hero-info">
+      <h1 class="hero-info-heading">Register </h1>
+      <br><br>
+
+
+      <form method="POST">
+              <div class="hero-info">
+                  <input class="hero-input" type="text" id="name" placeholder="name" name="name"
+           minlength="4" required><br><br>
 
 
                 </div>
-              <div class="form-item">
-                  <span class="material-icons">label</span>
-                  <label >email:</label>
-                  <input type="email" id="email" name="email"
-           minlength="4" required>
+              <div class="hero-info">
+                  <input class="hero-input" type="email" id="email" placeholder="email" name="email"
+           minlength="4" required><br><br>
 
 
                 </div>
-              <div class="form-item">
-                  <span class="material-icons">label</span>
-                  <label >password:</label>
-                  <input type="password" id="pass" name="password"
-           minlength="4" required>
+              <div class="hero-info">
+                  <input class="hero-input" type="password" id="pass" placeholder="password"  name="password"
+           minlength="4" required><br>
               </div>
               <br>
-              <button type="submit"> SEND </button>
+              <button type="submit" class="hero-info-button">Send</button><br>
 
           </form>
+        </div>
 
+
+    <div class="hero-img">
+      <img src="static/images/12.jpg" alt="">
     </div>
-</div>
+  </section>
+  <!-- End Hero Section  -->
 
 {%endblock%}
+
+
+
+
+

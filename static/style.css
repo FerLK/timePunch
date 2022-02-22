@@ -165,6 +165,10 @@ html {
 	letter-spacing: .5rem;
 	color: whitesmoke;
 }
+.hero .hero-info .hero-input {
+	font-size: 2.3rem;
+	color:black;
+}
 .hero .hero-info .hero-info-input {
 	font-size: 1.6rem;
 	letter-spacing: .5rem;
@@ -175,6 +179,14 @@ html {
 	letter-spacing: .5rem;
 	color: green;
 }
+.hero .hero-info .hero-info-link {
+	font-size: 1.9rem;
+	text-decoration: none;
+	text-transform: uppercase;
+	display: flex;
+	margin-left: 30px;
+}
+
 .hero .hero-info .hero-info-button {
 	margin-top: 30px;
 	padding: 2rem 5rem;
@@ -195,6 +207,15 @@ html {
 	height: 80%;
 	width: 80%;
 }
+.hero .form-item{
+   display: flex;
+   width: 90%;
+   background: transparent;
+   margin: 10px auto;
+   border-bottom: 1px solid;
+   align-items: center;
+}
+
 /* End Hero Section */
 
 /* About Section  */

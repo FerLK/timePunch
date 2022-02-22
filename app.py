@@ -6,7 +6,7 @@ from flask_login import login_user, login_required, logout_user
 from resource.models import User, Work
 from db import db
 import os
-from datetime import datetime
+from datetime import datetime, timedelta
 from flask import Flask
 from flask_sqlalchemy import SQLAlchemy
 from flask_login import LoginManager, login_user, login_required, logout_user, current_user
@@ -169,7 +169,9 @@ def add_works():
         db.session.commit()
 
         return redirect(url_for("add_works"))
-    return render_template("works/add_work.html", time=time, works=works, active=current_user.working, name=current_user.name)
+    time2 = [x for x in str(time)]
+    del time2[-8:-1]
+    return render_template("works/add_work.html", time="".join(time2), works=works, active=current_user.working, name=current_user.name)
 
 
 @app.route('/profile_work', methods=['GET', 'POST'])
