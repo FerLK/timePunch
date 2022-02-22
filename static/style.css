@@ -65,6 +65,7 @@ html {
 	width: 70px;
 	transition: .3s ease transform;
 	cursor: pointer;
+	position: absolute;
 }
 .nav-bar .nav-list .hamburger.active {
 	transform: rotate(360deg);
