@@ -1,32 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1,shrink-to-fit=no">
-    <title> </title>
-    
-    <link rel="stylesheet" href="/static/css/master.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web Cifar</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
+  <link rel="stylesheet" href="/static/style.css">
 </head>
-<body class="d-flex flex-column">
-   <div id="page-container">
-   <div id="content-wrap">
+<body>
     <header>
         {% include "model-header.html"%}
     </header>
     <main>
-        <div class="background"></div>
-
         {%block content%}
         {%endblock%}
+        <section id="services" class="services container">
+    <div class="services-header">
+      <h1 class="services-header-heading">services</h1>
+         <div id = "clock" class="services-header-desc">
+            <h2 id = "time"></h2>
+            <p id = weekDay></p>
+         </div>
+      <p class="services-header-desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni temporibus, omnis illum ipsa reiciendis illo eos odio possimus voluptatibus architecto.</p>
+    </div>
+    <div class="services-info">
+      <div class="service">
+        <div class="service-card">
+          <div class="service-front">
+            <i class="fa fa-clock"></i>
+            <h1 class="service-front-heading">Day Work</h1>
+          </div>
+          <div class="service-back">
+            <h1 class="service-back-heading">Day Work</h>
+            <p class="service-back-desc">Lorem ipsum dolor sit unt placeat impedit laboriosam quam consequatur quasi nihil libero ad, quaerat, alias illum excepturi. Iste quo repellendus consequuntur asperiores dignissimos, quaerat obcaecati officiis repudiandae fugit tenetur nulla impedit!</p>
+          </div>
+        </div>
+      </div>
+      <div class="service">
+        <div class="service-card">
+          <div class="service-front">
+            <i class="fa fa-building"></i>
+            <h1 class="service-front-heading">Profile</h1>
+          </div>
+          <div class="service-back">
+            <h1 class="service-back-heading">Profile</h1>
+            <p class="service-back-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum aut dolor voluptatem incidunt placeat impedit laboriosam quam consequatur quasi nihil libero ad, quaerat, alias illum excepturi. Iste quo repellendus consequuntur asperiores dignissimos, quaerat obcaecati officiis repudiandae fugit tenetur nulla impedit!</p>
+          </div>
+        </div>
+      </div>
+      <div class="service">
+        <div class="service-card">
+          <div class="service-front">
+            <i class="fa fa-list"></i>
+            <h1 class="service-front-heading">Login</h1>
+          </div>
+          <div class="service-back">
+            <h1 class="service-back-heading">Login</h1>
+            <p class="service-back-desc"><a class ="hero-info-button" href="{{url_for('login')}}"><button>enter</button></a></p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
     </main>
 
-    </div>
-    <footer id="footer" >
+    <footer>
         {% include "model-footer.html"%}
     </footer>
-    </div>
+
 
     <script type = "application/javascript" src = "/static/clock.js"></script>
 

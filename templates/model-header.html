@@ -1,18 +1,21 @@
-
-<img class="logo" src="/static/images/clock.png" alt="" >
-<nav>
-    <ul class = "nav_links">
-        <li><a href="{{url_for('index')}}">Home</a></li>
+<!-- nav-bar  -->
+  <section id="nav-bar" class="container">
+    <header class="nav-bar">
+      <div class="brand"><a href="#hero"><h1>Clock Puch</h1></a></div>
+      <div class="nav-list">
+        <div class="hamburger">
+          <div class="bar"></div>
+        </div>
+        <ul>
+          <li><a href="{{url_for('index')}}">Home</a></li>
         <li><a href="{{url_for('add_works')}}">Initiate</a></li>
         <li><a href="{{url_for('profile_users')}}">Profile</a></li>
-        <li><a href="{{url_for('profile_works')}}">Works</a></li>
-        <li><a class ="cta" href="{{url_for('login')}}"><button>sign</button></a></li>
-    </ul>
-</nav>
-<div id = "clock">
-    <p id = "time"></p>
-    <p id = weekDay></p>
-</div>
+        </ul>
+      </div>
+    </header>
+  </section>
+  <!-- End nav-bar  -->
+
 
 
 

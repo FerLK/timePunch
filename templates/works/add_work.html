@@ -1,43 +1,40 @@
 {%extends "model-page.html"%}
 {%block content%}
-<div class = "mid">
-    <div class = "container_mid" id="reg">
-        <h2>Works</h2>
-        {% if not active%}
-            <form action="" method="POST">
-               <p>Usuário: {{name}}</p>
-               <div class="form-item">
-               <span class="material-icons">label</span>
 
-                  <p>Function: </p>
-                   <input type="text" name="name">
-                </div>
-               <br>
+  <!-- Hero Section  -->
+  <section id="hero" class="hero container">
+    <div class="hero-info">
+      <h1 class="hero-info-heading">Punch the Clock</h1>
+      <p class="hero-info-subheading">Work Info</p>
 
-                <div class = "camps">
-                    <p  value = "">Local</p><br>
+    {% if not active%}
+      <form action="" method="POST">
+        <p class="hero-info-subheading">Usuário: {{name}}</p>
+           <div>
+               <p class="hero-info-subheading">Function: <input type="text" name="name"> </p>
+           </div><br>
 
-                    <span class="local"><input type = "radio"  name = "local" value = "Presential"> Presential</span>
+                <div class="hero-info-input">
+                    <p  class="hero-info-label">Local</p><br>
 
-                    <span class="local"><input type = "radio"  name = "local" value = "Home office"> Home Office</span>
+                    <span class="local"><input type = "radio"  name = "local" value = "Presential"> Presential</span><br>
+
+                    <span class="local"><input type = "radio"  name = "local" value = "Home office"> Home Office</span><br>
 
                     <span class="local"><input type = "radio"  name = "local" value = "Outside"> On The Street</span>
                 </div><br>
 
-                 <div class = "camps">
-                    <p id="label" value = "">Work Period</p><br>
+                 <div class="hero-info-input">
+                    <p class="hero-info-label">Work Period</p><br>
 
-                    <span class="local"><input type = "radio"  name = "" value = "6"> Trainee - 6h</span>
+                    <span class="local"><input type = "radio"  name = "" value = "6"> Trainee - 6h</span><br>
 
-                    <span class="local"><input type = "radio"  name = "" value = "8"> Regular - 8h</span>
+                    <span class="local"><input type = "radio"  name = "" value = "8"> Regular - 8h</span><br>
 
                     <span class="local"><input type = "radio"  name = "" value = "12"> Extra Time - 12h</span>
                 </div><br><br>
 
-
-
-
-             <button type="submit"> SEND </button>
+             <button type="submit" class="hero-info-button"> SEND </button> <br>
            </form>
 
              {%else%}
@@ -49,12 +46,17 @@
                <br>
             </div><br>
               <h3>End the Day ? </h3><br>
-
+            <a href="#" type="button" class="hero-info-button">Portfolio</a>
              <button type="submit"> SEND </button> <br>
             {% endif %}
             </form>
 
     </div>
-</div>
+      <div class="hero-img">
+          <img src="static/images/12.jpg" alt="">
+        </div>
+
+  </section>
+  <!-- End Hero Section  -->
 
 {%endblock%}
