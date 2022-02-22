@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Web Cifar</title>
+  <title>Punch the Clock</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous" />
   <link rel="stylesheet" href="/static/style.css">
 </head>
@@ -16,12 +16,13 @@
         {%endblock%}
         <section id="services" class="services container">
     <div class="services-header">
-      <h1 class="services-header-heading">services</h1>
+      <h1 class="services-header-heading">Clock Puch</h1>
          <div id = "clock" class="services-header-desc">
-            <h2 id = "time"></h2>
+            <h1 id = "time"></h1>
             <p id = weekDay></p>
          </div>
-      <p class="services-header-desc">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Magni temporibus, omnis illum ipsa reiciendis illo eos odio possimus voluptatibus architecto.</p>
+      <p class="services-header-desc">A time clock web-software designed for employee timekeeping and export data</p>
+
     </div>
     <div class="services-info">
       <div class="service">
@@ -31,8 +32,8 @@
             <h1 class="service-front-heading">Day Work</h1>
           </div>
           <div class="service-back">
-            <h1 class="service-back-heading">Day Work</h>
-            <p class="service-back-desc">Lorem ipsum dolor sit unt placeat impedit laboriosam quam consequatur quasi nihil libero ad, quaerat, alias illum excepturi. Iste quo repellendus consequuntur asperiores dignissimos, quaerat obcaecati officiis repudiandae fugit tenetur nulla impedit!</p>
+            <h1 class="service-back-heading"><a href="{{url_for('add_works')}}">Day Work</a></h1>
+            <p class="service-back-desc">start your daily activities</p>
           </div>
         </div>
       </div>
@@ -43,8 +44,8 @@
             <h1 class="service-front-heading">Profile</h1>
           </div>
           <div class="service-back">
-            <h1 class="service-back-heading">Profile</h1>
-            <p class="service-back-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum aut dolor voluptatem incidunt placeat impedit laboriosam quam consequatur quasi nihil libero ad, quaerat, alias illum excepturi. Iste quo repellendus consequuntur asperiores dignissimos, quaerat obcaecati officiis repudiandae fugit tenetur nulla impedit!</p>
+            <h1 class="service-back-heading"><a href="{{url_for('profile_users')}}">Profile</a></h1>
+            <p class="service-back-desc">A time clock web-software designed for employee timekeeping and exporting data</p>
           </div>
         </div>
       </div>
@@ -52,12 +53,11 @@
         <div class="service-card">
           <div class="service-front">
             <i class="fa fa-list"></i>
-            <h1 class="service-front-heading">Login</h1>
+            <h1 class="service-front-heading">Reports</h1>
           </div>
           <div class="service-back">
-            <h1 class="service-back-heading">Login</h1>
-            <p class="service-back-desc"><a class ="hero-info-button" href="{{url_for('login')}}"><button>enter</button></a></p>
-
+            <h1 class="service-back-heading"><a href="#">Reports</a></h1>
+            <p class="service-back-desc">Information and consultation of your worked days </p>
           </div>
         </div>
       </div>

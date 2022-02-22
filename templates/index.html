@@ -1,15 +1,13 @@
 {%extends "model-page.html"%}
 {%block content%}
-<div class = "mid">
-    <div class = "container_mid" id="reg">
+    <div class="active">
             {% if actives%}
-        <h2>APRESENTAÇÃO</h2><br>
-        <p>projeto de treino ->  Flask, SQL, HTML & JavaS</p><br>
+        <p class ="active-info">training projects ->  Flask, SQL, HTML & JavaS</p><br>
             {% else %}
-        <h2>O seu perfil não tem mais atividades hoje.</h2><br>
+        <p class="active-info">No more activities today. See you tomorrow.</p><br>
             {% endif %}
     </div>
-</div>
+
 
 
 {%endblock%}

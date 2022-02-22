@@ -1,38 +1,53 @@
 {%extends "model-page.html"%}
 {%block content%}
 
-<div class = "mid">
-    <div class = "container_mid">
-        <h2>PROFILE</h2>
-        <form action="" method="POST">
+
+<!-- Hero Section  -->
+  <section id="hero" class="hero container">
+    <div class="hero-info">
+      <h1 class="hero-info-heading">Profile</h1>
+      <br>
+
+      <form action="" method="POST">
           <ul class = "">
-            <div class="form-item">
-                  <span class="material-icons">label</span>
-                   <h3>Name : {{name}}</h3>
+            <div class="hero-info">
+                   <p class="hero-info-subheading">Name: {{name}}</p><br>
                 </div>
-              <div class="form-item">
-                  <span class="material-icons">label</span>
-                   <h3>ID : {{id_}}</h3>
+              <div class="hero-info">
+                   <p class="hero-info-subheading" >ID: {{id_}}</p><br>
                 </div>
-               <div class="form-item">
-                  <span class="material-icons">label</span>
-                   <h3>Worked Days : {{alltime_work}}</h3>
+               <div class="hero-info">
+                   <p class="hero-info-subheading">Worked Days: {{alltime_work}}</p><br>
                 </div>
 
             <br>
             </ul>
-            <h4>Last Work</h4><br>
+            <h4 class="hero-info-label">Last Work</h4><br>
 
              {%for work in all_works%}
-                <div class="">
+                <div class="hero-info">
                 <ul>
-                    <p>{{work}}</p><br>
+                    <p class="hero-info-subheading">{{work}}</p><br>
                 </ul>
                 </div>
             {%endfor%}
 
         </form>
+        </div>
+
+
+    <div class="hero-img">
+      <img src="static/images/12.jpg" alt="">
     </div>
-</div>
+  </section>
+  <!-- End Hero Section  -->
+
 
 {%endblock%}
+
+
+
+
+
+
+

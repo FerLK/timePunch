@@ -35,6 +35,10 @@ login_manager.login_view = 'login'
 
 @app.route('/')
 def index():
+    return render_template('model-page.html')
+
+@app.route('/home')
+def home():
     return render_template('index.html', actives=True)
 
 
@@ -61,7 +65,7 @@ def login():
             next = request.args.get('next')
             if next == None or not next[0] == '/':
                 next = url_for('welcome_user')
-            return redirect(url_for("works.add"))
+            return redirect(url_for("home"))
         else:
             return redirect(url_for('login'))
 
@@ -72,7 +76,7 @@ def login():
 @login_required
 def logout():
     logout_user()
-    return render_template('index.html')
+    return render_template('model-page.html')
 
 
 ###USERS###

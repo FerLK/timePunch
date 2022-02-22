@@ -1,20 +1,19 @@
 {%extends "model-page.html"%}
 {%block content%}
-
-
 <!-- Hero Section  -->
   <section id="hero" class="hero container">
     <div class="hero-info">
-      <h1 class="hero-info-heading">Login </h1>
+      <h1 class="hero-info-heading">Login</h1>
       <br>
 
 
       <form action="" method="POST">
           <ul class = "">
               {% if current_user.is_authenticated %}
-
+              <p class="hero-info-subheading">you are already logged in</p>
+              <br><br>
               <div class="hero-info">
-                  <h2><a href="{{url_for('logout')}}">logout</a></h2>
+                  <h1><font size="6"><a  href="{{url_for('logout')}}">logout</a></font></h1>
 
               </div>
               {%else%}
@@ -41,8 +40,6 @@
     </div>
   </section>
   <!-- End Hero Section  -->
-
-
 {%endblock%}
 
 

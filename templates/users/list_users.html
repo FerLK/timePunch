@@ -1,12 +1,13 @@
 {%extends "model-page.html"%}
 {%block content%}
-<div class = "mid">
-    <div class = "container_mid" id="reg">
-        <h2>List</h2>
-
-          <form action="" method="GET">
+<!-- Hero Section  -->
+  <section id="hero" class="hero container">
+    <div class="hero-info">
+      <h1 class="hero-info-heading">List</h1>
+      <br>
+       <form action="" method="GET">
             {%for user in all_users%}
-            <div class = "row_mid">
+            <div class = "hero-info-subheading">
                 <ul>
                 <h3>      {{user}}   </h3>
 
@@ -17,7 +18,7 @@
           </form>
         <form action="" method="GET">
             {%for work in all_works%}
-            <div class = "row_mid">
+            <div class = "hero-info-subheading">
                 <ul>
                 <h3>      {{work}}   </h3>
                 </ul>
@@ -25,8 +26,16 @@
             </div>
             {%endfor%}
           </form>
+        </div>
 
+
+    <div class="hero-img">
+      <img src="static/images/12.jpg" alt="">
     </div>
-</div>
-
+  </section>
+  <!-- End Hero Section  -->
 {%endblock%}
+
+
+
+

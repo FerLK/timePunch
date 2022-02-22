@@ -18,6 +18,17 @@ html {
 	justify-content: center;
 }
 /* Nav Bar  */
+.logo{
+    border-radius: 75%;
+    max-width:110px;
+    max-height:80px;
+    width: auto;
+    height: auto;
+    border:13px solid rgb(0,0, 0);
+    cursor: pointer;
+}
+
+
 #nav-bar {
 	height: auto;
 	width: 100%;
@@ -217,6 +228,26 @@ html {
 }
 
 /* End Hero Section */
+
+/* Active Section  */
+.active {
+	min-height: 20vh;
+	width: 100%;
+	padding-top: 90px;
+	justify-content: center;
+	background-color: gray;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.active .active-info {
+	width: 100%;
+	font-size: 3rem;
+	text-align: center;
+}
+
+/* End Active Section  */
 
 /* About Section  */
 .about {

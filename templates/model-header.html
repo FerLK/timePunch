@@ -1,15 +1,16 @@
 <!-- nav-bar  -->
   <section id="nav-bar" class="container">
+    <img class="logo" src="/static/images/1clock.png" alt="" >
     <header class="nav-bar">
-      <div class="brand"><a href="#hero"><h1>Clock Puch</h1></a></div>
+      <div class="brand"><a href="#hero"><h1></h1></a></div>
       <div class="nav-list">
         <div class="hamburger">
           <div class="bar"></div>
         </div>
         <ul>
-          <li><a href="{{url_for('index')}}">Home</a></li>
+          <li><a href="{{url_for('home')}}">Home</a></li>
         <li><a href="{{url_for('add_works')}}">Initiate</a></li>
-        <li><a href="{{url_for('profile_users')}}">Profile</a></li>
+        <li><a href="{{url_for('login')}}">Login</a></li>
         </ul>
       </div>
     </header>
